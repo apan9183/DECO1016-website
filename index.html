@@ -14,6 +14,12 @@
   padding: 20px 10px;
 }
 
+.header-left {
+  float: left;
+  width: 500px;
+  height: 100px;
+}
+
 /* Style the header links */
 .header a {
   float: left;
@@ -154,6 +160,7 @@ body {
   }
   
   .parallax {
+
       padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; 
       background-image: url('bus1.jpg'); background-attachment: fixed; background-size: 
       cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: top center;}
@@ -232,9 +239,12 @@ background:rgb(33, 90, 59);
 <body>
 
     <div class="header">
-        <a href="#default" class="logo">Murrays</a>
+        <div class="header-left">
+          <img src="logo.png" alt="logo">
+        </div>
         <div class="header-right">
-          <a href="#contact">Contact us: 6789998212</a>
+          <p><strong>Contact us now!</strong></p>
+          <p>24/7: 6789998212 | Express services: 5672837190</p>
         </div>
       </div>
 
@@ -243,14 +253,14 @@ background:rgb(33, 90, 59);
       </form>
 
 <div class="topnav" id="myTopnav">
-  <a href="#home" class="active">Home</a>
+  <a href="index.html" class="active">Home</a>
   <a href="#about">About us</a>
   <a href="#timetables">Express Services and Timetables</a>
-  <a href="#group">Group hire</a>
+  <a href="book_trip.html">Group hire</a>
   <a href="#manage">Manage your existing booking</a>
-  <a href="#help">Help and advice</a>
-  <a href="#loyalty">Loyalty Club</a>
-  <a href="#book">Book now</a>
+  <a href="#friends">Invite friends on your trip</a>
+  <a href="sign_up.html">Loyalty Club</a>
+  <a href="book_trip.html">Book now</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
@@ -284,7 +294,8 @@ function myFunction() {
 <section>
 <div class="parallax2"></div>
 <div style="height:100px;background-color:#39A96B;font-size:20px; border: thick solid black; align-content: center; transition: ease-in-out;">
-<p>Want to experience the best quality Australia has to offer? Sign up now!</p>
+<p>Want to experience the best quality Australia has to offer? <a href="sign_up.html">Sign up now!</a> </p>
+</div></p>
 </div>
 <div class="parallax2"></div>
 </section>
@@ -292,7 +303,7 @@ function myFunction() {
 <section>
 <div class="parallax3"></div>
 <div style="height:100px;background-color:#39A96B;font-size:20px; border: thick solid black; align-content: center; transition: ease-in-out;">
-<p>Call us now on 6789998212 to learn more! Book group packages for great discounts..!</p>
+<p>Call us now on 6789998212 to learn more! <a href="book_trip.html">Book group packages for great discounts..!</a> </p>
 </div>
 <div class="parallax3"></div>
 </section>
