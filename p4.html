@@ -323,6 +323,117 @@ hr {
   </style>
 
 
+<style>
+.column {
+  
+    float: left;
+    width: 50%;
+    padding: 5px;
+  }
+  
+  /* Clear floats after the columns */
+  .row::after {
+    
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+  </style>
+
+
+<style>
+        .box {
+          position: relative;
+          float: left;
+          width: 50%;
+        }
+        
+        .image {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+        
+        .overlay {
+          position: absolute;
+          bottom: 0;
+          left: 100%;
+          right: 0;
+          background-color: rgb(118, 199, 143);
+          overflow: hidden;
+          width: 0;
+          height: 100%;
+          transition: .5s ease;
+        }
+        
+        .box:hover .overlay {
+          width: 100%;
+          left: 0;
+        }
+        
+        .text {
+          color: white;
+          font-size: 40px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          white-space: nowrap;
+        }
+        </style>
+
+<style>
+
+.box2 {
+  position: relative;
+  float: right;
+  width: 50%;
+}
+
+.image2 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(118, 199, 143);
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.box2:hover .overlay2 {
+  width: 100%;
+}
+
+.text2 {
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+</style>
+
 </head>
 
 
@@ -379,56 +490,35 @@ hr {
     
     <form action="/action_page.php">
       <div class="container">
-        <h2>Sign up to our Loyalty Club and get every 6th trip free!</h2>
-        <h3><em>Please fill in your details</em></h3>
-        <hr>
-    
-        <label for="first-name"><b>First name</b></label>
-        <input type="text" placeholder="Enter First name" name="first-name" required>
-    
-        <label for="surname"><b>Surname</b></label>
-        <input type="text" placeholder="Enter Surname" name="surname" required>
-    
-    
-        <label for="birthday"><b>Birthday</b></label><br>
-        <br><input type="date" placeholder="Enter Birthday" name="birthday" required><br><br>
+        <h2>Last one!</h2>
+        <h3><em>Would you prefer to be contacted through email or a mobile text message?</em></h3>
         
-        <label for="gender"><b>Gender</b></label><br><br>
-        <input type="radio" name="gender" value="male"> Male<br>
-        <input type="radio" name="gender" value="female"> Female<br>
-        <input type="radio" name="gender" value="other"> Other<br><br>
-    
-        <label for="consession-card"><b>Concession card</b></label><br><br>
-        <input type="radio" name="consession-card" value="student">Student<br>
-        <input type="radio" name="consession-card" value="seniors-card">Seniors card<br>
-        <input type="radio" name="consession-card" value="disability">Disability services<br>
-        <input type="radio" name="consession-card" value="other">Other<br>
-        <input type="radio" name="consession-card" value="not-applicable">Not applicable<br><br>
-    
-        <label for="concession"><b>Concession card number (if applicable)</b></label>
-        <input type="text" placeholder="Enter Concession Card Number" name="concession">
-    
-        <br><label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="email" required>
+        <hr>    
+        
+<div class="row">
+        <div class="box">
+          <img src="pic1.jpg" alt="bus1" class="image">
+          <div class="overlay">
+            <div class="text">Email</div>
+          </div>
+        </div>
 
-        <br><label for="mobile"><b>Mobile number</b></label>
-        <input type="text" placeholder="Enter Mobile Number" name="mobile" required>
+        <div class="box2">
+                <img src="pic2.jpg" alt="bus2" class="image2">
+                <div class="overlay2">
+                  <div class="text2">Mobile text</div>
+                </div>
+        </div>
     
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-    
-        <label for="psw-repeat"><b>Repeat Password</b></label>
-        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-        <hr>
-        <p>By joining our Loyalty Club you agree to our<a href="#"> Terms & Conditions</a>.</p>
-    
-        <button type="submit" class="register"><a href="p2.html">Register</a></button>
+</div>
+       
+        <button type="submit" class="register"><a href="p5.html">Finish!</a></button>
+
+        <button class="register"><a href="p3.html">Back</a></button>
     
       </div>
     
-      <div class="container signin">
-        <p>Already have an account with us? <a href="login.html">Sign in here!</a></p>
-      </div>
+
     
     </form>
     
