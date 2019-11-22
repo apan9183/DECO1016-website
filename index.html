@@ -7,7 +7,7 @@
 <style>
     * {box-sizing: border-box;}
 
-/* Style the header with a grey background and some padding */
+/* Style  header with background and some padding */
 .header {
   overflow: hidden;
   background-color: rgb(255, 255, 255);
@@ -20,7 +20,7 @@
   height: 100px;
 }
 
-/* Style the header links */
+/* Style header links */
 .header a {
   float: left;
   color: black;
@@ -32,24 +32,20 @@
   border-radius: 4px;
 }
 
-/* Change the background color on mouse-over */
+/* Change background color on mouse-over */
 .header a:hover {
   background-color: #ddd;
   color: black;
 }
 
-/* Style the active/current link*/
-.header a.active {
-  background-color: dodgerblue;
-  color: white;
-}
 
-/* Float the link section to the right */
+
+/* Float link section to right */
 .header-right {
   float: right;
 }
 
-/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+/* Add media queries for responsiveness - when the screen is 500px wide or less, it will stack the links on top of each other */
 @media screen and (max-width: 500px) {
   .header a {
     float: none;
@@ -84,7 +80,7 @@
     }
     </style>
 
-
+<!-- styling the navigation bar and body  -->
 <style>
 body {
   margin: 0;
@@ -144,7 +140,7 @@ body {
 }
 </style>
 
-
+<!-- creating the parallax effect -->
 <style>
   body, html {
     height: 100%;
@@ -169,7 +165,7 @@ body {
     cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: top center;}
   
   
-    /* Full height */
+    
     height: 100%; 
   
     /* Create the parallax scrolling effect */
@@ -180,8 +176,8 @@ body {
     transition: ease-in-out;
   }
 
-  @media only screen and (max-width: 1366px) { /* Makes sure it works on mobile by removing the parallax on small screens 
-      otherwise the formatting could get messed up */
+  @media only screen and (max-width: 1366px) { /* Makes sure works on mobile by removing parallax on small screens 
+      otherwise formatting could get messed up */
        .parallax {
           background-attachment: scroll;
                    }
@@ -189,19 +185,19 @@ body {
   </style>
 
 
+<!-- scrollbar -->
 <style>
-/* width */
+
 ::-webkit-scrollbar {
 width: 20px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
 box-shadow: inset 0 0 5px grey; 
 border-radius: 10px;
 }
 
-/* Handle */
+
 ::-webkit-scrollbar-thumb {
 background: #39A96B; 
 border-radius: 10px;
@@ -213,6 +209,8 @@ background:rgb(33, 90, 59);
 }
 </style>
 
+
+<!-- styling footer -->
 <style>
     .footer {
        position: static;
@@ -235,6 +233,7 @@ background:rgb(33, 90, 59);
 
 <body>
 
+<!-- create the header -->
     <div class="header">
         <div class="header-left">
           <img src="logo.png" alt="logo">
@@ -245,16 +244,18 @@ background:rgb(33, 90, 59);
         </div>
       </div>
 
+<!-- create search bar -->
       <form>
           <input type="text" name="search" placeholder="Search trips...">
       </form>
 
+<!-- create navigation bar -->
       <div class="topnav" id="myTopnav">
           <a href="index.html" class="active">Home</a>
           <a href="about.html">About us</a>
           <a href="#timetables">Express Services and Timetables</a>
           <a href="#discounts">Holiday discounts</a>
-          <a href="friends.html">Invite friends on your trip</a>
+          <a href="#friends">Invite friends on your trip</a>
           <a href="book_trip.html">Choose trips</a>
           <a href="#feedback">Feedback and Reviews</a>
           <a href="#work">Work with us</a>
@@ -265,56 +266,57 @@ background:rgb(33, 90, 59);
           </a>
         </div>
 
-<div 
-    style="padding-left:16px">
-  <h2>Kick back, relax and leave the driving to us</h2>
-  <h3>Travel with one of the best coach services in Australia!</h3>
-</div>
+        <div 
+            style="padding-left:16px">
+          <h2>Kick back, relax and leave the driving to us</h2>
+          <h3>Travel with one of the best coach services in Australia!</h3>
+        </div>
 
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
+<!-- add java for the nav bar -->
+        <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
 
-
-<div class="parallax"></div>
-<div style="height:150px;background-color:#39A96B;font-size:20px; border: thick solid rgb(6, 99, 53); text-align: center; transition: ease-in-out;">
-        <p>Here at Murrays, we deliver only the best services. It is our top priority to bring you the best experience possible. 
-        <br>Our coaches are fully equipped with <strong>airconditioning, leather seats, reclining seats, and much more.</strong></p>
-        <p>To find out more about our travel, packages, <a href="book_trip.html">book a trip now!</a></p>
-</div>
-<div class="parallax"></div>
-
-
-<div class="parallax2"></div>
-<div style="height:200px;background-color:#39A96B;font-size:20px; border: thick solid rgb(6, 99, 53); text-align: center; transition: ease-in-out;">
-<p>Want to experience the best quality Australia has to offer?</p>
-<h3><p><a href="sign_up.html">Sign up now </a>for <strong>amazing rewards!</strong> <br><strong><em>Every 6th trip is free!</em></strong></p></h3>
-<p>Already have an account with us? Even better! <a href="login.html">Log in here</a></p>
-</div></p>
-</div>
-<div class="parallax2"></div>
+<!-- add text for the parallax effect -->
+        <div class="parallax"></div>
+        <div style="height:150px;background-color:#39A96B;font-size:20px; border: thick solid rgb(6, 99, 53); text-align: center; transition: ease-in-out;">
+                <p>Here at Murrays, we deliver only the best services. It is our top priority to bring you the best experience possible. 
+                <br>Our coaches are fully equipped with <strong>airconditioning, leather seats, reclining seats, and much more.</strong></p>
+                <p>To find out more about our travel, packages, <a href="book_trip.html">book a trip now!</a></p>
+        </div>
+        <div class="parallax"></div>
 
 
-
-<div class="parallax3"></div>
-<div style="height:150px;background-color:#39A96B;font-size:20px; border: thick solid rgb(6, 99, 53); text-align: center; transition: ease-in-out;">
-<p>Learn more about us <a href="about.html">here</a>!</p>
-<p>Call us now on 6789998212 to learn more! Book <strong>group packages</strong> with our staff for great discounts..!</p>
-</div>
-<div class="parallax3"></div>
+        <div class="parallax2"></div>
+        <div style="height:200px;background-color:#39A96B;font-size:20px; border: thick solid rgb(6, 99, 53); text-align: center; transition: ease-in-out;">
+        <p>Want to experience the best quality Australia has to offer?</p>
+        <h3><p><a href="sign_up.html">Sign up now </a>for <strong>amazing rewards!</strong> <br><strong><em>Every 6th trip is free!</em></strong></p></h3>
+        <p>Already have an account with us? Even better! <a href="login.html">Log in here</a></p>
+        </div></p>
+        </div>        
+        <div class="parallax2"></div>
 
 
 
-<div class="footer">
-    <p>Thank you for choosing Murrays!</p>
-  </div>
+        <div class="parallax3"></div>
+        <div style="height:150px;background-color:#39A96B;font-size:20px; border: thick solid rgb(6, 99, 53); text-align: center; transition: ease-in-out;">
+        <p>Learn more about us <a href="about.html">here</a>!</p>
+        <p>Call us now on 6789998212 to learn more! Book <strong>group packages</strong> with our staff for great discounts..!</p>
+        </div>
+        <div class="parallax3"></div>
+
+
+<!-- add a footer at end of page -->
+        <div class="footer">
+            <p>Thank you for choosing Murrays!</p>
+        </div>
 
 </body>
 </html>

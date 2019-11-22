@@ -9,7 +9,7 @@
 <style>
     * {box-sizing: border-box;}
 
-/* Style the header with a grey background and some padding */
+/* Style header with background and  padding */
 .header {
   overflow: hidden;
   background-color: rgb(255, 255, 255);;
@@ -22,7 +22,7 @@
   height: 100px;
 }
 
-/* Style the header links */
+/* Style header links */
 .header a {
   float: left;
   color: black;
@@ -35,19 +35,19 @@
 }
 
 
-/* Change the background color on mouse-over */
+/* Change background color on mouse-over */
 .header a:hover {
   background-color: #ddd;
   color: black;
 }
 
 
-/* Float the link section to the right */
+/* Float link section to the right */
 .header-right {
   float: right;
 }
 
-/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+/* Add media queries for responsiveness*/
 @media screen and (max-width: 500px) {
   .header a {
     float: none;
@@ -140,26 +140,26 @@ body {
 }
 </style>
 
-
+<!-- scroll bar -->
 <style>
-/* width */
+
 ::-webkit-scrollbar {
 width: 20px;
 }
 
-/* Track */
+
 ::-webkit-scrollbar-track {
 box-shadow: inset 0 0 5px grey; 
 border-radius: 10px;
 }
 
-/* Handle */
+
 ::-webkit-scrollbar-thumb {
 background: #39A96B; 
 border-radius: 10px;
 }
 
-/* Handle on hover */
+
 ::-webkit-scrollbar-thumb:hover {
 background:rgb(33, 90, 59); 
 }
@@ -214,72 +214,73 @@ background:rgb(33, 90, 59);
 </style>
 
 <style>
-.register {
-  background-color: #1D9A6C;
-  color: white;
-  padding: 16px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
+        .register {
+            background-color: #1D9A6C;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+            }
 </style>
 
-
+<!-- footer -->
 <style>
-    .footer {
-           position: static;
-           left: 0;
-           bottom: 0;
-           width: 100%;
-           height: 100px;
-           padding: 50px;
-           border: 1px solid #188977;
-           background-color: #188977;
-           color: white;
-           text-align: center;
-           font-size:large;
+        .footer {
+            position: static;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100px;
+            padding: 50px;
+            border: 1px solid #188977;
+            background-color: #188977;
+            color: white;
+            text-align: center;
+            font-size:large;
+            }
+    </style>
+
+
+<!-- images in grid -->
+<style>
+        .image {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
         }
-</style>
-
-
-
-<style>
-.image {
-    opacity: 1;
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
-  }
-  
-  .middle {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  .column:hover .image {
-    opacity: 0.3;
-  }
-  
-  .column:hover .middle {
-    opacity: 1;
-  }
-  
-  .text {
-    background-color: #4CAF50;
-    color: white;
-    font-size: 16px;
-    padding: 16px 32px;
-  }
+        
+        /* style transition and center text */
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); 
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        
+        .column:hover .image {
+            opacity: 0.3;
+        }
+        
+        .column:hover .middle {
+            opacity: 1;
+        }
+        
+        .text {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            padding: 16px 32px;
+        }
   </style>
 
 <style>
@@ -333,7 +334,7 @@ background:rgb(33, 90, 59);
                   <p><strong>Contact us now!</strong></p>
                   <p>24/7: 6789998212 | Express services: 5672837190</p>
                 </div>
-              </div>
+        </div>
         
               <form>
                   <input type="text" name="search" placeholder="Search trips...">
@@ -344,7 +345,7 @@ background:rgb(33, 90, 59);
                     <a href="about.html">About us</a>
                     <a href="#timetables">Express Services and Timetables</a>
                     <a href="#discounts">Holiday discounts</a>
-                    <a href="friends.html">Invite friends on your trip</a>
+                    <a href="#friends">Invite friends on your trip</a>
                     <a href="book_trip.html"class="active">Choose trips</a>
                     <a href="#feedback">Feedback and Reviews</a>
                     <a href="#work">Work with us</a>
@@ -353,91 +354,91 @@ background:rgb(33, 90, 59);
                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                       <i class="fa fa-bars"></i>
                     </a>
-                  </div>
+                </div>
      
        
         
         <script>
         function myFunction() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
-        }
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+                }
         </script>
 
 
-
-<div class="row">
-  <div class="column">
-   <img src="bus5.jpg" alt="bus1" class= "image" style= "width:100%">
-   <div class="middle">
-        <div class="text">More information...</div>
-      </div>
-    
-    <h2>Sydney to Canberra</h2>
-    <p>More info...</p>
-  </div>
-
-  <div class="column">
-        <img src="bus4.jpg" alt="bus2" class= "image" style= "width:100%">
+<!-- text for images in grid -->
+        <div class="row">
+        <div class="column">
+        <img src="bus5.jpg" alt="bus1" class= "image" style= "width:100%">
         <div class="middle">
                 <div class="text">More information...</div>
-              </div>
-    <h2>Canberra to Melbourne</h2>
-    <p>More info...</p>
-  </div>
+            </div>
+            
+            <h2>Sydney to Canberra</h2>
+            <p>More info...</p>
+        </div>
 
-  <div class="column">
-        <img src="bus6.jpg" alt="bus3" class= "image" style= "width:100%">
-        <div class="middle">
-                <div class="text">More information...</div>
-              </div>
-    <h2>Sydney to Wollongong</h2>
-    <p>More info...</p>
-  </div>
-</div>
+        <div class="column">
+                <img src="bus4.jpg" alt="bus2" class= "image" style= "width:100%">
+                <div class="middle">
+                        <div class="text">More information...</div>
+                    </div>
+            <h2>Canberra to Melbourne</h2>
+            <p>More info...</p>
+        </div>
 
-<h2>Explore our three most popular options plus more!</h2>
-<br>
-<hr>
+        <div class="column">
+                <img src="bus6.jpg" alt="bus3" class= "image" style= "width:100%">
+                <div class="middle">
+                        <div class="text">More information...</div>
+                    </div>
+            <h2>Sydney to Wollongong</h2>
+            <p>More info...</p>
+        </div>
+        </div>
 
-<div id="myProgress">
-  <!-- <div id="myBar"></div> -->
-  <div id="myBar">0%</div>
-</div>
+        <h2>Explore our three most popular options plus more!</h2>
+        <br>
+        <hr>
 
-<br>
-<button class= "register" onclick="move()"><strong>Book now</strong></button> 
+        <div id="myProgress">
+        
+        <div id="myBar">0%</div>
+        </div>
 
+        <br>
+        <button class= "register" onclick="move()"><strong>Book now</strong></button> 
 
-<script>
-var i = 0;
-function move() {
-  if (i == 0) {
-    i = 1;
-    var elem = document.getElementById("myBar");
-    var width = 10;
-    var id = setInterval(frame, 10);
-    function frame() {
-      if (width >= 100) {
-        clearInterval(id);
-        i = 0;
-      } else {
-        width++;
-        elem.style.width = width + "%";
-        elem.innerHTML = width + "%";
-      }
-    }
-  }
-}
-</script>
+<!--progress bar -->
+        <script>
+        var i = 0;
+        function move() {
+        if (i == 0) {
+            i = 1;
+            var elem = document.getElementById("myBar");
+            var width = 10;
+            var id = setInterval(frame, 10);
+            function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+                i = 0;
+            } else {
+                width++;
+                elem.style.width = width + "%";
+                elem.innerHTML = width + "%";
+            }
+            }
+        }
+        }
+        </script>
 
-<div class="footer">
-    <p>Thank you for choosing Murrays!</p>
-</div>
+        <div class="footer">
+            <p>Thank you for choosing Murrays!</p>
+        </div>
 
 </body>
 </html>

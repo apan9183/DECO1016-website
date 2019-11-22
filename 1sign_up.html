@@ -49,7 +49,7 @@
   float: right;
 }
 
-/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+/* Add media queries for responsiveness - small screens */
 @media screen and (max-width: 500px) {
   .header a {
     float: none;
@@ -124,7 +124,7 @@ body {
 }
 </style>
 
-
+<!-- scrollbar -->
 <style>
 /* width */
 ::-webkit-scrollbar {
@@ -182,7 +182,7 @@ hr {
   margin-bottom: 25px;
 }
 
-/* Set a style for the submit button */
+/* style for the submit button */
 .register {
   background-color: #1D9A6C;
   font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
@@ -202,7 +202,7 @@ hr {
 }
 
 
-/* Set a grey background color and center the text of the "sign in" section */
+/* Set background color and center the text of the "sign in" section */
 .signin {
   background-color: #73ca9f;
   text-align: center;
@@ -229,7 +229,7 @@ hr {
 <style>
       
         
-    /* The Modal (background) */
+    /* Modal (background) */
     .modal {
       display: none; /* Hidden by default */
       position: fixed; /* Stay in place */
@@ -241,7 +241,7 @@ hr {
       height: 100%; /* Full height */
       overflow: auto; /* Enable scroll if needed */
       background-color: rgb(0,0,0); /* Fallback color */
-      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      background-color: rgba(0,0,0,0.4); /* opacity */
     }
     
     /* Modal Content */
@@ -350,7 +350,7 @@ hr {
                   <a href="about.html">About us</a>
                   <a href="#timetables">Express Services and Timetables</a>
                   <a href="#discounts">Holiday discounts</a>
-                  <a href="friends.html">Invite friends on your trip</a>
+                  <a href="#friends">Invite friends on your trip</a>
                   <a href="book_trip.html">Choose trips</a>
                   <a href="#feedback">Feedback and Reviews</a>
                   <a href="#work">Work with us</a>
@@ -438,49 +438,50 @@ hr {
     </form>
     
     <!-- Trigger/Open The Modal -->
-    <button class="help" id="Help"><strong><em>Need help? Click here for more info!</em></strong></button>
+      <button class="help" id="Help"><strong><em>Need help? Click here for more info!</em></strong></button>
     
     <!-- The Modal -->
-    <div id="myModal" class="modal">
+      <div id="myModal" class="modal">
     
       <!-- Modal content -->
-      <div class="modal-content">
-        <div class="modal-header">
-          <span class="close">&times;</span>
-          <h2>Don't stress! Your satisfaction is our priority.</h2>
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Don't stress! Your satisfaction is our priority.</h2>
+          </div>
+          <div class="modal-body">
+            <p>Feel free to email us at any time at help@murrays.com with all your booking enquiries.</p>
+            <p>Give us a call on 6789998212 to our 24/7 helpline!</p>
+          </div>
+          <div class="modal-footer">
+            <h3>Our friendly staff are always happy to help!</h3>
+          </div>
         </div>
-        <div class="modal-body">
-          <p>Feel free to email us at any time at help@murrays.com with all your booking enquiries.</p>
-          <p>Give us a call on 6789998212 to our 24/7 helpline!</p>
-        </div>
-        <div class="modal-footer">
-          <h3>Our friendly staff are always happy to help!</h3>
-        </div>
+      
       </div>
     
-    </div>
-    
+    <!-- for pop up -->
     <script>
-    // Get the modal
+    // Get  modal
     var modal = document.getElementById("myModal");
     
-    // Get the button that opens the modal
+    // Get  button that opens the modal
     var btn = document.getElementById("Help");
     
-    // Get the <span> element that closes the modal
+    // Get  <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
     
-    // When the user clicks the button, open the modal 
+    // When user clicks the button, open the modal 
     btn.onclick = function() {
       modal.style.display = "block";
     }
     
-    // When the user clicks on <span> (x), close the modal
+    // When user clicks on <span> (x), close the modal
     span.onclick = function() {
       modal.style.display = "none";
     }
     
-    // When the user clicks anywhere outside of the modal, close it
+    // When user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
       if (event.target == modal) {
         modal.style.display = "none";
