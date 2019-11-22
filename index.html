@@ -10,7 +10,7 @@
 /* Style the header with a grey background and some padding */
 .header {
   overflow: hidden;
-  background-color: #BFE1B0;
+  background-color: rgb(255, 255, 255);
   padding: 20px 10px;
 }
 
@@ -30,12 +30,6 @@
   font-size: 18px;
   line-height: 25px;
   border-radius: 4px;
-}
-
-/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-.header a.logo {
-  font-size: 25px;
-  font-weight: bold;
 }
 
 /* Change the background color on mouse-over */
@@ -68,9 +62,7 @@
 }
 </style>
 
-<style>
-    @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-    </style>
+
 
 <style>  /* search bar */
     input[type=text] {
@@ -80,7 +72,6 @@
       border-radius: 4px;
       font-size: 16px;
       background-color: white;
-      background-image: url('searchicon.png');
       background-position: 10px 10px; 
       background-repeat: no-repeat;
       padding: 12px 20px 12px 40px;
@@ -98,7 +89,7 @@
 body {
   margin: 0;
   font-family: 
-  Arial, Helvetica, sans-serif;
+  'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
 
 .topnav {
@@ -168,8 +159,14 @@ body {
 
   .parallax2 {
     padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; 
-      background-image: url('bus1.jpg'); background-attachment: fixed; background-size: 
+      background-image: url('bus2.jpg'); background-attachment: fixed; background-size: 
       cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: top center;}
+
+  .parallax3 {
+
+    padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; 
+    background-image: url('bus3.jpg'); background-attachment: fixed; background-size: 
+    cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: top center;}
   
   
     /* Full height */
@@ -228,9 +225,9 @@ background:rgb(33, 90, 59);
        background-color: #188977;
        color: white;
        text-align: center;
-       font-size: larger;
+       font-size:large;
     }
-    </style>
+</style>
 
 
 </head>
@@ -252,24 +249,26 @@ background:rgb(33, 90, 59);
           <input type="text" name="search" placeholder="Search trips...">
       </form>
 
-<div class="topnav" id="myTopnav">
-  <a href="index.html" class="active">Home</a>
-  <a href="#about">About us</a>
-  <a href="#timetables">Express Services and Timetables</a>
-  <a href="book_trip.html">Group hire</a>
-  <a href="#manage">Manage your existing booking</a>
-  <a href="#friends">Invite friends on your trip</a>
-  <a href="sign_up.html">Loyalty Club</a>
-  <a href="book_trip.html">Book now</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
+      <div class="topnav" id="myTopnav">
+          <a href="index.html" class="active">Home</a>
+          <a href="about.html">About us</a>
+          <a href="#timetables">Express Services and Timetables</a>
+          <a href="#discounts">Holiday discounts</a>
+          <a href="friends.html">Invite friends on your trip</a>
+          <a href="book_trip.html">Choose trips</a>
+          <a href="#feedback">Feedback and Reviews</a>
+          <a href="#work">Work with us</a>
+          <a href="1sign_up.html"><strong>Join Loyalty Club</strong></a>
+          <a href="login.html"><strong>Log in</strong></a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
 
 <div 
     style="padding-left:16px">
   <h2>Kick back, relax and leave the driving to us</h2>
-  <p>Travel with one of the best coach services in Australia!</p>
+  <h3>Travel with one of the best coach services in Australia!</h3>
 </div>
 
 <script>
@@ -285,32 +284,36 @@ function myFunction() {
 
 
 <div class="parallax"></div>
-<div style="height:100px;background-color:#39A96B;font-size:20px; border: thick solid black; align-content: center; transition: ease-in-out;">
-        <p>Here at Murrays we deliver only the best services. 
-        Our coaches are fully equipped with airconditioning, leather seats, reclining seats, and much more.</p>
+<div style="height:150px;background-color:#39A96B;font-size:20px; border: thick solid rgb(6, 99, 53); text-align: center; transition: ease-in-out;">
+        <p>Here at Murrays, we deliver only the best services. It is our top priority to bring you the best experience possible. 
+        <br>Our coaches are fully equipped with <strong>airconditioning, leather seats, reclining seats, and much more.</strong></p>
+        <p>To find out more about our travel, packages, <a href="book_trip.html">book a trip now!</a></p>
 </div>
 <div class="parallax"></div>
 
-<section>
+
 <div class="parallax2"></div>
-<div style="height:100px;background-color:#39A96B;font-size:20px; border: thick solid black; align-content: center; transition: ease-in-out;">
-<p>Want to experience the best quality Australia has to offer? <a href="sign_up.html">Sign up now!</a> </p>
+<div style="height:200px;background-color:#39A96B;font-size:20px; border: thick solid rgb(6, 99, 53); text-align: center; transition: ease-in-out;">
+<p>Want to experience the best quality Australia has to offer?</p>
+<h3><p><a href="sign_up.html">Sign up now </a>for <strong>amazing rewards!</strong> <br><strong><em>Every 6th trip is free!</em></strong></p></h3>
+<p>Already have an account with us? Even better! <a href="login.html">Log in here</a></p>
 </div></p>
 </div>
 <div class="parallax2"></div>
-</section>
 
-<section>
+
+
 <div class="parallax3"></div>
-<div style="height:100px;background-color:#39A96B;font-size:20px; border: thick solid black; align-content: center; transition: ease-in-out;">
-<p>Call us now on 6789998212 to learn more! <a href="book_trip.html">Book group packages for great discounts..!</a> </p>
+<div style="height:150px;background-color:#39A96B;font-size:20px; border: thick solid rgb(6, 99, 53); text-align: center; transition: ease-in-out;">
+<p>Learn more about us <a href="about.html">here</a>!</p>
+<p>Call us now on 6789998212 to learn more! Book <strong>group packages</strong> with our staff for great discounts..!</p>
 </div>
 <div class="parallax3"></div>
-</section>
+
 
 
 <div class="footer">
-    <p>Murrays thanks you!</p>
+    <p>Thank you for choosing Murrays!</p>
   </div>
 
 </body>

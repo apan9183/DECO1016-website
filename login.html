@@ -3,7 +3,6 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
@@ -62,7 +61,7 @@
 
 
 <style>  /* search bar */
-    input[type=text] {
+    input[type=search] {
       width: 130px;
       box-sizing: border-box;
       border: 2px solid #1D9A6C;
@@ -76,7 +75,7 @@
       transition: width 0.4s ease-in-out;
     }
     
-    input[type=text]:focus {
+    input[type=search]:focus {
       width: 100%;
     }
     </style>
@@ -85,7 +84,8 @@
 <style>
 body {
   margin: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-family: 
+  'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
 
 .topnav {
@@ -171,47 +171,8 @@ background:rgb(33, 90, 59);
   box-sizing: border-box;
 }
 
-/* Create three equal columns that floats next to each other */
-.column {
-  
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
-
-/* Clear floats after the columns */
-.row::after {
-  
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
-</style>
 
 
-<style>
-#myProgress {
-  align-content: center;
-  width: 100%;
-  background-color: #ddd;
-}
-
-#myBar {
-  width: 10%;
-  height: 30px;
-  background-color: rgb(20, 105, 55);
-  text-align: center; /* To center it horizontally (if you want) */
-  line-height: 30px; /* To center it vertically */
-  color: white;
-}
-</style>
 
 <style>
 .register {
@@ -223,6 +184,132 @@ background:rgb(33, 90, 59);
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
+}
+</style>
+
+
+
+
+<style>
+
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #1D9A6C;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
 }
 </style>
 
@@ -242,52 +329,8 @@ background:rgb(33, 90, 59);
            font-size:large;
         }
 </style>
-
-
-
-<style>
-.image {
-    opacity: 1;
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
-  }
-  
-  .middle {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  .column:hover .image {
-    opacity: 0.3;
-  }
-  
-  .column:hover .middle {
-    opacity: 1;
-  }
-  
-  .text {
-    background-color: #4CAF50;
-    color: white;
-    font-size: 16px;
-    padding: 16px 32px;
-  }
-  </style>
-
 </head>
-
 <body>
-
-
-
         <div class="header">
                 <div class="header-left">
                   <img src="logo.png" alt="logo">
@@ -299,7 +342,7 @@ background:rgb(33, 90, 59);
               </div>
         
               <form>
-                  <input type="text" name="search" placeholder="Search trips...">
+                  <input type="search" name="search" placeholder="Search trips...">
               </form>
         
               <div class="topnav" id="myTopnav">
@@ -308,98 +351,73 @@ background:rgb(33, 90, 59);
                     <a href="#timetables">Express Services and Timetables</a>
                     <a href="#discounts">Holiday discounts</a>
                     <a href="friends.html">Invite friends on your trip</a>
-                    <a href="book_trip.html"class="active">Choose trips</a>
+                    <a href="book_trip.html">Choose trips</a>
                     <a href="#feedback">Feedback and Reviews</a>
                     <a href="#work">Work with us</a>
                     <a href="1sign_up.html"><strong>Join Loyalty Club</strong></a>
-                    <a href="login.html"><strong>Log in</strong></a>
+                    <a href="login.html"class="active"><strong>Log in</strong></a>
                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                       <i class="fa fa-bars"></i>
                     </a>
                   </div>
-     
-       
+
+                 
+<div style="padding-left:16px; text-align: center;">
+<h2>Already a member with us?</h2>
+<h3>Great! <br>Save time and save your bookings by logging in.
+    <br> Every 6th trip is free!
+</h3>
+
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+<br>
+<img src="guy.jpg" alt="guy" style="float:inline-end; padding: 10px; width: 50%; height: 50%;">
+</div>
+
+
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="old bus.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
         
-        <script>
-        function myFunction() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
-        }
-        </script>
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
 
-
-
-<div class="row">
-  <div class="column">
-   <img src="bus5.jpg" alt="bus1" class= "image" style= "width:100%">
-   <div class="middle">
-        <div class="text">More information...</div>
-      </div>
-    
-    <h2>Sydney to Canberra</h2>
-    <p>More info...</p>
-
-  </div>
-  <div class="column">
-        <img src="bus4.jpg" alt="bus2" class= "image" style= "width:100%">
-        <div class="middle">
-                <div class="text">More information...</div>
-              </div>
-    <h2>Canberra to Melbourne</h2>
-    <p>More info...</p>
-  </div>
-
-  <div class="column">
-        <img src="bus6.jpg" alt="bus3" class= "image" style= "width:100%">
-        <div class="middle">
-                <div class="text">More information...</div>
-              </div>
-    <h2>Sydney to Wollongong</h2>
-    <p>More info...</p>
-  </div>
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
 </div>
-
-<h2>Explore our three most popular options plus more!</h2>
-<br>
-<hr>
-
-<div id="myProgress">
-  <!-- <div id="myBar"></div> -->
-  <div id="myBar">0%</div>
-</div>
-
-<br>
-<button class= "register" onclick="move()"><strong>Book now</strong></button> 
-
 
 <script>
-var i = 0;
-function move() {
-  if (i == 0) {
-    i = 1;
-    var elem = document.getElementById("myBar");
-    var width = 10;
-    var id = setInterval(frame, 10);
-    function frame() {
-      if (width >= 100) {
-        clearInterval(id);
-        i = 0;
-      } else {
-        width++;
-        elem.style.width = width + "%";
-        elem.innerHTML = width + "%";
-      }
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
     }
-  }
 }
 </script>
 
 <div class="footer">
-    <p>Thank you for choosing Murrays!</p>
+        <p>Thank you for choosing Murrays!</p>
 </div>
 
 </body>

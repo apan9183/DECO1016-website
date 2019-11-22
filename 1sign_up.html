@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+<style>
+    * {box-sizing: border-box;}
+
+/* Style the header with a grey background and some padding */
+.header {
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);;
+  padding: 20px 10px;
+}
+
+.header-left {
+  float: left;
+  width: 500px;
+  height: 100px;
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+</style>
+
+
+
+
+<style>
+body {
+  margin: 0;
+  font-family: 
+  'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #777;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #39A96B;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+</style>
+
+
+<style>
+/* width */
+::-webkit-scrollbar {
+width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #39A96B; 
+border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background:rgb(33, 90, 59); 
+}
+</style>
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.register {
+  background-color: #1D9A6C;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.register:hover {
+  opacity: 50;
+}
+
+
+/* Add a blue text color to links */
+/* a {
+  color: rgb(20, 90, 160);
+} */
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #73ca9f;
+  text-align: center;
+}
+
+
+
+/* Set a style for the help button */
+.help {
+  background-color: #1D9A6C;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+</style>
+
+
+<style>
+      
+        
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    
+    /* Modal Content */
+    .modal-content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      padding: 0;
+      border: 1px solid #888;
+      width: 80%;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+      -webkit-animation-name: animatetop;
+      -webkit-animation-duration: 0.4s;
+      animation-name: animatetop;
+      animation-duration: 0.4s
+    }
+    
+    /* Add Animation */
+    @-webkit-keyframes animatetop {
+      from {top:-300px; opacity:0} 
+      to {top:0; opacity:1}
+    }
+    
+    @keyframes animatetop {
+      from {top:-300px; opacity:0}
+      to {top:0; opacity:1}
+    }
+    
+    /* The Close Button */
+    .close {
+      color: white;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .modal-header {
+      padding: 2px 16px;
+      background-color: #5cb85c;
+      color: white;
+    }
+    
+    .modal-body {padding: 2px 16px;}
+    
+    .modal-footer {
+      padding: 2px 16px;
+      background-color: #8ac78a;
+      color: white;
+    }
+    </style>
+
+
+<style>  /* search bar */
+    input[type=search] {
+      width: 130px;
+      box-sizing: border-box;
+      border: 2px solid #1D9A6C;
+      border-radius: 4px;
+      font-size: 16px;
+      background-color: white;
+      background-position: 10px 10px; 
+      background-repeat: no-repeat;
+      padding: 12px 20px 12px 40px;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+    }
+    
+    input[type=search]:focus {
+      width: 100%;
+    }
+  </style>
+
+
+</head>
+
+
+
+
+<body>
+
+
+
+        <div class="header">
+                <div class="header-left">
+                  <img src="logo.png" alt="logo">
+                </div>
+                <div class="header-right">
+                  <p><strong>Contact us now!</strong></p>
+                  <p>24/7: 6789998212 | Express services: 5672837190</p>
+                </div>
+              </div>
+        
+              <form>
+                  <input type="search" name="search" placeholder="Search trips...">
+              </form>
+        
+              <div class="topnav" id="myTopnav">
+                  <a href="index.html">Home</a>
+                  <a href="about.html">About us</a>
+                  <a href="#timetables">Express Services and Timetables</a>
+                  <a href="#discounts">Holiday discounts</a>
+                  <a href="friends.html">Invite friends on your trip</a>
+                  <a href="book_trip.html">Choose trips</a>
+                  <a href="#feedback">Feedback and Reviews</a>
+                  <a href="#work">Work with us</a>
+                  <a href="1sign_up.html"class="active"><strong>Join Loyalty Club</strong></a>
+                  <a href="login.html"><strong>Log in</strong></a>
+                  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                  </a>
+                </div>
+    
+
+        <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+            </script>
+    
+    
+    
+    
+    <form action="/action_page.php">
+      <div class="container">
+        <h2>Sign up to our Loyalty Club and get every 6th trip free!</h2>
+        <h3><em>Please fill in your details</em></h3>
+        <hr>
+    
+        <label for="first-name"><b>First name</b></label>
+        <input type="text" placeholder="Enter First name" name="first-name" required>
+    
+        <label for="surname"><b>Surname</b></label>
+        <input type="text" placeholder="Enter Surname" name="surname" required>
+    
+    
+        <label for="birthday"><b>Birthday</b></label><br>
+        <br><input type="date" placeholder="Enter Birthday" name="birthday" required><br><br>
+        
+        <label for="gender"><b>Gender</b></label><br><br>
+        <input type="radio" name="gender" value="male"> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <input type="radio" name="gender" value="other"> Other<br><br>
+    
+        <label for="consession-card"><b>Concession card</b></label><br><br>
+        <input type="radio" name="consession-card" value="student">Student<br>
+        <input type="radio" name="consession-card" value="seniors-card">Seniors card<br>
+        <input type="radio" name="consession-card" value="disability">Disability services<br>
+        <input type="radio" name="consession-card" value="other">Other<br>
+        <input type="radio" name="consession-card" value="not-applicable">Not applicable<br><br>
+    
+        <label for="concession"><b>Concession card number (if applicable)</b></label>
+        <input type="text" placeholder="Enter concession card number" name="concession">
+    
+        <br><label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+    
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+        <hr>
+        <p>By joining our Loyalty Club you agree to our<a href="#"> Terms & Conditions</a>.</p>
+    
+        <button type="submit" class="register">Register</button>
+    
+      </div>
+    
+      <div class="container signin">
+        <p>Already have an account with us? <a href="login.html">Sign in here!</a></p>
+      </div>
+    
+    </form>
+    
+    <!-- Trigger/Open The Modal -->
+    <button class="help" id="Help"><strong><em>Need help? Click here for more info!</em></strong></button>
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Don't stress! Your satisfaction is our priority.</h2>
+        </div>
+        <div class="modal-body">
+          <p>Feel free to email us at any time at help@murrays.com with all your booking enquiries.</p>
+          <p>Give us a call on 6789998212 to our 24/7 helpline!</p>
+        </div>
+        <div class="modal-footer">
+          <h3>Our friendly staff are always happy to help!</h3>
+        </div>
+      </div>
+    
+    </div>
+    
+    <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("Help");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
+  
+
+
+</body>
+
+
+</html>

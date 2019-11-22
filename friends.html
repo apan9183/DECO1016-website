@@ -35,6 +35,7 @@
 }
 
 
+
 /* Change the background color on mouse-over */
 .header a:hover {
   background-color: #ddd;
@@ -69,6 +70,7 @@
       border-radius: 4px;
       font-size: 16px;
       background-color: white;
+      background-image: url('searchicon.png');
       background-position: 10px 10px; 
       background-repeat: no-repeat;
       padding: 12px 20px 12px 40px;
@@ -85,7 +87,8 @@
 <style>
 body {
   margin: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-family: 
+  'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
 
 .topnav {
@@ -171,47 +174,8 @@ background:rgb(33, 90, 59);
   box-sizing: border-box;
 }
 
-/* Create three equal columns that floats next to each other */
-.column {
-  
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
-
-/* Clear floats after the columns */
-.row::after {
-  
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
-</style>
 
 
-<style>
-#myProgress {
-  align-content: center;
-  width: 100%;
-  background-color: #ddd;
-}
-
-#myBar {
-  width: 10%;
-  height: 30px;
-  background-color: rgb(20, 105, 55);
-  text-align: center; /* To center it horizontally (if you want) */
-  line-height: 30px; /* To center it vertically */
-  color: white;
-}
-</style>
 
 <style>
 .register {
@@ -243,46 +207,11 @@ background:rgb(33, 90, 59);
         }
 </style>
 
-
-
-<style>
-.image {
-    opacity: 1;
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
-  }
-  
-  .middle {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  .column:hover .image {
-    opacity: 0.3;
-  }
-  
-  .column:hover .middle {
-    opacity: 1;
-  }
-  
-  .text {
-    background-color: #4CAF50;
-    color: white;
-    font-size: 16px;
-    padding: 16px 32px;
-  }
-  </style>
-
 </head>
+
+
+
+
 
 <body>
 
@@ -307,8 +236,8 @@ background:rgb(33, 90, 59);
                     <a href="about.html">About us</a>
                     <a href="#timetables">Express Services and Timetables</a>
                     <a href="#discounts">Holiday discounts</a>
-                    <a href="friends.html">Invite friends on your trip</a>
-                    <a href="book_trip.html"class="active">Choose trips</a>
+                    <a href="friends.html"class="active">Invite friends on your trip</a>
+                    <a href="book_trip.html">Choose trips</a>
                     <a href="#feedback">Feedback and Reviews</a>
                     <a href="#work">Work with us</a>
                     <a href="1sign_up.html"><strong>Join Loyalty Club</strong></a>
@@ -318,89 +247,9 @@ background:rgb(33, 90, 59);
                     </a>
                   </div>
      
-       
-        
-        <script>
-        function myFunction() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
-        }
-        </script>
-
-
-
-<div class="row">
-  <div class="column">
-   <img src="bus5.jpg" alt="bus1" class= "image" style= "width:100%">
-   <div class="middle">
-        <div class="text">More information...</div>
-      </div>
-    
-    <h2>Sydney to Canberra</h2>
-    <p>More info...</p>
-
-  </div>
-  <div class="column">
-        <img src="bus4.jpg" alt="bus2" class= "image" style= "width:100%">
-        <div class="middle">
-                <div class="text">More information...</div>
-              </div>
-    <h2>Canberra to Melbourne</h2>
-    <p>More info...</p>
-  </div>
-
-  <div class="column">
-        <img src="bus6.jpg" alt="bus3" class= "image" style= "width:100%">
-        <div class="middle">
-                <div class="text">More information...</div>
-              </div>
-    <h2>Sydney to Wollongong</h2>
-    <p>More info...</p>
-  </div>
-</div>
-
-<h2>Explore our three most popular options plus more!</h2>
-<br>
-<hr>
-
-<div id="myProgress">
-  <!-- <div id="myBar"></div> -->
-  <div id="myBar">0%</div>
-</div>
-
-<br>
-<button class= "register" onclick="move()"><strong>Book now</strong></button> 
-
-
-<script>
-var i = 0;
-function move() {
-  if (i == 0) {
-    i = 1;
-    var elem = document.getElementById("myBar");
-    var width = 10;
-    var id = setInterval(frame, 10);
-    function frame() {
-      if (width >= 100) {
-        clearInterval(id);
-        i = 0;
-      } else {
-        width++;
-        elem.style.width = width + "%";
-        elem.innerHTML = width + "%";
-      }
-    }
-  }
-}
-</script>
-
-<div class="footer">
-    <p>Thank you for choosing Murrays!</p>
-</div>
-
+  
+    <div class="footer">
+        <p>Thank you for choosing Murrays!</p>
+    </div>
 </body>
 </html>

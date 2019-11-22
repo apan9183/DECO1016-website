@@ -171,47 +171,8 @@ background:rgb(33, 90, 59);
   box-sizing: border-box;
 }
 
-/* Create three equal columns that floats next to each other */
-.column {
-  
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
-
-/* Clear floats after the columns */
-.row::after {
-  
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
-</style>
 
 
-<style>
-#myProgress {
-  align-content: center;
-  width: 100%;
-  background-color: #ddd;
-}
-
-#myBar {
-  width: 10%;
-  height: 30px;
-  background-color: rgb(20, 105, 55);
-  text-align: center; /* To center it horizontally (if you want) */
-  line-height: 30px; /* To center it vertically */
-  color: white;
-}
-</style>
 
 <style>
 .register {
@@ -227,8 +188,11 @@ background:rgb(33, 90, 59);
 </style>
 
 
+
+
+
 <style>
-    .footer {
+        .footer {
            position: static;
            left: 0;
            bottom: 0;
@@ -242,45 +206,6 @@ background:rgb(33, 90, 59);
            font-size:large;
         }
 </style>
-
-
-
-<style>
-.image {
-    opacity: 1;
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
-  }
-  
-  .middle {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  .column:hover .image {
-    opacity: 0.3;
-  }
-  
-  .column:hover .middle {
-    opacity: 1;
-  }
-  
-  .text {
-    background-color: #4CAF50;
-    color: white;
-    font-size: 16px;
-    padding: 16px 32px;
-  }
-  </style>
 
 </head>
 
@@ -304,11 +229,11 @@ background:rgb(33, 90, 59);
         
               <div class="topnav" id="myTopnav">
                     <a href="index.html">Home</a>
-                    <a href="about.html">About us</a>
+                    <a href="about.html"class="active">About us</a>
                     <a href="#timetables">Express Services and Timetables</a>
                     <a href="#discounts">Holiday discounts</a>
                     <a href="friends.html">Invite friends on your trip</a>
-                    <a href="book_trip.html"class="active">Choose trips</a>
+                    <a href="book_trip.html">Choose trips</a>
                     <a href="#feedback">Feedback and Reviews</a>
                     <a href="#work">Work with us</a>
                     <a href="1sign_up.html"><strong>Join Loyalty Club</strong></a>
@@ -318,89 +243,50 @@ background:rgb(33, 90, 59);
                     </a>
                   </div>
      
-       
-        
-        <script>
-        function myFunction() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
-        }
-        </script>
+  
 
 
-
-<div class="row">
-  <div class="column">
-   <img src="bus5.jpg" alt="bus1" class= "image" style= "width:100%">
-   <div class="middle">
-        <div class="text">More information...</div>
-      </div>
+<div 
+    style="padding-left:16px">
+<h2>About us</h2>
+</div>
+<img src="old bus.jpg" alt="old bus" style="float: right; padding: 40px;">
+<div style="padding: 20px; background-color:rgb(96, 190, 139);">
     
-    <h2>Sydney to Canberra</h2>
-    <p>More info...</p>
-
-  </div>
-  <div class="column">
-        <img src="bus4.jpg" alt="bus2" class= "image" style= "width:100%">
-        <div class="middle">
-                <div class="text">More information...</div>
-              </div>
-    <h2>Canberra to Melbourne</h2>
-    <p>More info...</p>
-  </div>
-
-  <div class="column">
-        <img src="bus6.jpg" alt="bus3" class= "image" style= "width:100%">
-        <div class="middle">
-                <div class="text">More information...</div>
-              </div>
-    <h2>Sydney to Wollongong</h2>
-    <p>More info...</p>
-  </div>
-</div>
-
-<h2>Explore our three most popular options plus more!</h2>
-<br>
-<hr>
-
-<div id="myProgress">
-  <!-- <div id="myBar"></div> -->
-  <div id="myBar">0%</div>
-</div>
-
-<br>
-<button class= "register" onclick="move()"><strong>Book now</strong></button> 
+    <p>Since 1966 Murrays Coaches has grown into one of the country's largest coach companies with a <strong>world-wide reputation for excellence</strong>. 
+    <br>We are privileged to be the appointed transport provider for many of Australia's leading organisations. </p>
+    
+     <p><strong>Innovation</strong> is at the heart of our business. Originally a travel agent, Ron Murray diversified through the 80's and 90's with a variety 
+     of tourism business including: day tour operations, a pub, sheep stations, cruise companies as well as buses and coaches. 
+     <br>This period also saw rapid growth for our business with expansions from Canberra into Sydney, Gold Coast, Cairns and Melbourne. 
+     Often, on invitation from existing customers. </p>
 
 
-<script>
-var i = 0;
-function move() {
-  if (i == 0) {
-    i = 1;
-    var elem = document.getElementById("myBar");
-    var width = 10;
-    var id = setInterval(frame, 10);
-    function frame() {
-      if (width >= 100) {
-        clearInterval(id);
-        i = 0;
-      } else {
-        width++;
-        elem.style.width = width + "%";
-        elem.innerHTML = width + "%";
-      }
-    }
-  }
-}
-</script>
+     <p>Proudly, in 2005 Ron Murray was recognised for his services to the tourism and 
+     transport industry by being awarded an <strong><em>Order of Australia</em></strong>. We employ more than 400 staff and our pristine 
+     white coaches have become synonymous with <strong>quality</strong>.</p>
+    
+     <p> Ron Murray, the <em>Executive Chairman and Founder</em>, commenced Murrays as a retail travel agent in 1966 and is the sole shareholder of Murrays Australia Pty Ltd a company he built 
+         into an iconic Australian brand in the coach & tourism industry known for its <strong>pristine white luxury coaches</strong> with the large green 
+         M & Murrays name down the side of the coach.
+     </p>
 
-<div class="footer">
-    <p>Thank you for choosing Murrays!</p>
-</div>
+     <p>With over 52 years of continual success in building the Murrays brand, Ron has always placed an emphasis on <strong>quality and efficiency, 
+        customer service, operations and logistics and, in particular, safety</strong> to ensure that Murrays are well known as Australia’s leading group 
+        transport specialists.
+    </p>
+    <br><p>Check out the video below to learn more about our services and why you should travel with Murrays!</p>
+    </div>
 
-</body>
+    <div style= "margin: 0 auto; width: 600px; padding: 50px;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/86WtWpoQp5g" frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>  
+
+    <div class="footer">
+        <p>Thank you for choosing Murrays!</p>
+    </div>
+
+    </body>
+
 </html>
